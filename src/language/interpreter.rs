@@ -1102,8 +1102,7 @@ mod tests {
     /// an enviroment argument, otherwise you will get a compile time
     /// error.
     /// $check_correct: A closure with arguments (value) that checks for correctness
-    /// $(#[$meta:meta]): Attributes to add to test. If you do not have any attributes,
-    /// do not pass any attribute arguments
+    /// $(#[$meta:meta]): Optional: attributes to add to test.
     macro_rules! benchmark_test {
         ($(#[$meta:meta])* $test_name: ident, $bench_name:ident, $glenside_str: expr, $env: expr, $check_correct: expr) => {
             $(#[$meta])*
